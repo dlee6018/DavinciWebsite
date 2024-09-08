@@ -1,23 +1,18 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Container from "@mui/material/Container";
 import HomePage from "./pages/home-page";
 import Header from "./components/header";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomePage />,
-  },
-]);
-
 function App() {
   return (
-    <>
+    <Router>
       <Header />
       <Container>
-        <RouterProvider router={router} />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
       </Container>
-    </>
+    </Router>
   );
 }
 

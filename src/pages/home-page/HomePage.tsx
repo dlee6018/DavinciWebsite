@@ -1,8 +1,11 @@
+import FormComponent from "../../components/form";
+import "./HomePage.css";
+
 const HomePage = () => {
   return (
-    <div className="container">
-      <h1>Home</h1>
-      <p>This is the home page.</p>
+    <div className="homepage-container">
+      <h1>Welcome to Educaid</h1>
+      <FormComponent />
     </div>
   );
 };
